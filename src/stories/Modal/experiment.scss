@@ -1,0 +1,163 @@
+@import './variables';
+@import './mixins';
+@import 'include-media/dist/_include-media.scss';
+
+.#{$id} {
+  #modal-react {
+    //********************************
+    // Phone & small ipad
+    // 320px and 1024px
+    //********************************
+
+    @include media('>=phone', '<desktop-s') {
+      .modal__backdrop {
+        background: rgba(0, 0, 0, 0.65);
+        bottom: 0;
+        left: 0;
+        overflow: auto;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 200;
+      }
+
+      .modal__container {
+        background: #fff;
+        border-radius: 5px;
+        height: auto;
+        overflow: hidden;
+        margin: 10px;
+        position: absolute;
+      }
+
+      .modal__header {
+        margin: 20px;
+        .close-btn {
+          font-size: 20px;
+          font-weight: 400;
+          color: #000;
+          position: absolute;
+          right: 8px;
+          top: 0;
+          cursor: pointer;
+        }
+      }
+
+      .modal__para {
+        padding: 20px 15%;
+      }
+
+      .button-area {
+        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        a {
+          background: #0f7258;
+          border-radius: 4px;
+          padding: 1em 2.4em;
+          font-size: 0.9em;
+          margin: 0.3em;
+          color: white;
+          text-decoration: none;
+          flex-grow: 1;
+          text-align: center;
+          width: 215px;
+        }
+      }
+
+      .cancel-button {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: #33705a;
+        text-align: center;
+        margin: 10px;
+        cursor: pointer;
+      }
+    }
+
+    //********************************
+    // Desktop
+    // 1366px window width and more
+    //********************************
+
+    @include media('>=desktop-s') {
+      .modal__backdrop {
+        background: rgba(0, 0, 0, 0.65);
+        bottom: 0;
+        left: 0;
+        overflow: auto;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 200;
+      }
+
+      .modal__container {
+        background: #fff;
+        border-radius: 5px;
+        max-width: 36%;
+        max-height: 26%;
+        height: auto;
+        overflow: hidden;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+
+      .modal__header {
+        margin: 20px;
+        .close-btn {
+          font-size: 20px;
+          font-weight: 400;
+          color: #000;
+          position: absolute;
+          right: 8px;
+          top: 0;
+          cursor: pointer;
+        }
+      }
+
+      .modal__para {
+        padding: 20px 15%;
+      }
+
+      .button-area {
+        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        a {
+          background: #0f7258;
+          border-radius: 4px;
+          padding: 1em 2.4em;
+          font-size: 0.9em;
+          margin: 1em;
+          color: white;
+          text-decoration: none;
+          flex-grow: 1;
+          text-align: center;
+          width: 215px;
+        }
+      }
+
+      .cancel-button {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: #33705a;
+        text-align: center;
+        margin: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
